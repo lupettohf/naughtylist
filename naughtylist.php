@@ -57,7 +57,7 @@ function addReport($db, $geoip, $name, $protocol, $port, $ip)
 		 'longitude' => $geoipRecord->location->longitude,
 		 'latitude' => $geoipRecord->location->latitude,
 		 'countrycode' => $geoipRecord->country->isoCode,
-		 'geo' => $geoipRecord->mostSpecificSubdivision->name . " " . $geoipRecord->city->name
+		 'geo' => $geoipRecord->mostSpecificSubdivision->name . ", " . $geoipRecord->city->name
 		]
 	);
 
