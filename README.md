@@ -42,12 +42,13 @@ Fail2ban uses "action" config file to trigger external programs; you can find an
 * Copy the example file to `/etc/fail2ban/action.d/naughtylist.conf` 
 * (optionally) change the path and settings inside the config file to match your configuration
 * Edit the main jail file; this can vary from distro to distro, but it's usually the only file inside `/etc/fail2ban/jail.d`
-- Example of my jail config:
-`
-[sshd]
-enabled = true
-action = naughtylist
-`
+
+Example of my jail config:
+
+	[sshd]
+	enabled = true
+	action = naughtylist
+
 * For more infos check the fai2ban documentation. 
 
 ### Honeypot mode
