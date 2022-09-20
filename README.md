@@ -55,26 +55,26 @@ Example of my jail config:
 
 Naughtylist can be included inside HTML and PHP pages to act as a honeypot logger. 
 
-- Example:
+Example:
 
-`
-<?php
-	include '../path/to/naughtlist/naughtylist.php';
-	// Define HONEYPOT to true to enable honeypot mode.
-	define('HONEYPOT', true);
 
-	/* Optionally, add glue logic before calling the honeypot method;
-	 * for example you check if some data is posted.
-	 */
+	<?php
+		include '../path/to/naughtlist/naughtylist.php';
+		// Define HONEYPOT to true to enable honeypot mode.
+		define('HONEYPOT', true);
 
-	// Call the honeypot(name, protocol, port) method to log the incident.
-	honeypot("wordpress-login", "https", 443);
+		/* Optionally, add glue logic before calling the honeypot method;
+		 * for example you check if some data is posted.
+		 */
 
-	//DONE!
-?>
+		// Call the honeypot(name, protocol, port) method to log the incident.
+		honeypot("wordpress-login", "https", 443);
+
+		//DONE!
+	?>
 
 <!-- INSERT FAKE HONEYPOT LURING PAGE --> 
-`
+
 
 ### Remote mode / HTTP API
 
@@ -82,11 +82,11 @@ This script can act as a client and as server to store and recive reports from H
 
 If you have the script exposed on a webserver you can call it via HTTP and add reports, simply make a `POST` request with the following parameters:
 
-- name _~ the service name_
-- protocol _~ the service protocol_
-- port _~ the service port_
-- ip _~ the offender IP_
-- key _~ your secret key set in config.php_
+- name ~ the service name
+- protocol ~ the service protocol
+- port ~ the service port
+- ip ~ the offender IP
+- key ~ your secret key set in config.php
 
 This API is also used when you want to use the script in remote database mode, where it will call via curl your remote server, make sure to set the same SECRET on both machines.
 
