@@ -11,9 +11,9 @@ CREATE TABLE `naughtylist` (
   `geo` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `fail2ban`
+ALTER TABLE `naughtylist`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `fail2ban`
+ALTER TABLE `naughtylist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 COMMIT;
