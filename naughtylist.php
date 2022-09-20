@@ -75,7 +75,7 @@ function reportExists($db, $name, $protocol, $port, $ip)
 		 'ip' => $ip
 		]
 	);
-	if(!$stmt) { return -1; }
+	if(!$stmt) { return false; }
 	return $stmt->fetchColumn();
 }
 
@@ -101,7 +101,7 @@ function honeypot($name, $protocol, $port)
 
 		$report = reportExists($db, $name, $protocol, $port, $ip);
 
-		if($report != -1)
+		if($report != false)
 		{
 			updateReport($db, $report);
 		} else {
@@ -129,7 +129,7 @@ function serve()
 		{
 			$report = reportExists($db, $name, $protocol, $port, $ip);
 
-			if($report != -1)
+			if($report != false)
 			{
 				updateReport($db, $report);			
 			} else {

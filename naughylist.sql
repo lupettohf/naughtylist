@@ -1,7 +1,7 @@
 CREATE TABLE `naughtylist` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
-  `protocol` varchar(4) NOT NULL,
+  `protocol` varchar(10) NOT NULL,
   `port` int(11) NOT NULL,
   `ip` varchar(20) NOT NULL,
   `count` int(11) NOT NULL,
